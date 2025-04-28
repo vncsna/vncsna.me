@@ -3,13 +3,21 @@ title: 'Divagações sobre as APIs do Numpy, Scipy e Scikit-Learn'
 description: 'E a fascinação do unsplash com abelhas, ao invés de APIs'
 author: 'Vinicius Aguiar'
 date: '2021-08-24'
-coverImage: '/images/massimiliano-latella-unsplash.jpg'
+coverImage: '/images/006-001.webp'
 tags: ['python', 'numpy', 'scipy', 'scikit-learn', 'api']
 ---
 
-## E a fascinação do unsplash com abelhas, ao invés de APIs
+# Divagações sobre as APIs do Numpy, Scipy e Scikit-Learn
 
-## Prólogo
+<figure>
+  <img src="/images/006-001.webp" alt="By Massimiliano Latella on Unsplash" />
+  <figcaption style="text-align: center">
+    Photo by Massimiliano Latella on Unsplash
+  </figcaption>
+</figure>
+<br/>
+
+## E a fascinação do unsplash com abelhas, ao invés de APIs
 
 De vez em quando me encontro no mesmo lugar, basicamente perdido e sem saber o que escrever. A frequência é tamanha que eu me pergunto se realmente sei escrever (não é nem escrever bem, que isso eu nem espero). No entanto eu creio que duvidar de si mesmo é uma tamanha falha (eu acho, acordei particularmente feliz hoje). Recomendo sempre a leitura de Dune, e lembro de uma frase clássica:
 
@@ -75,7 +83,7 @@ Pela terceira e última vez (neste post), lembro que o fato de Python ser uma li
 
 Note que apesar dos projetos acima conseguirem sucesso e popularidade através de códigos e comunidade open source, existem diversos desafios de governança para manter um projeto de código livre. Como "evidências anedóticas" (eu até rio com essa expressão), lembro de Should You Open Source Your Startup?, Why I'm leaving Elm e The Hard Parts of Open Source.
 
-**TL;DR:** Open Source sem remuneração é um trabalho ingrato, com alta rotatividade, mas com potencial de marketing. A escolha "certa" é tornar seu código livre caso seu modelo de negócio não se baseie no código. Como exemplo tome a apresentação do Sentry.
+**TL;DR:** Open Source sem remuneração é um trabalho ingrato, com alta rotatividade, mas com potencial de marketing. A escolha "certa" é tornar seu código livre caso seu modelo de negócio não se baseie no código. Como exemplo tome a apresentação do Sentry:
 
 Apesar do código ser livre, o custo de instanciar localmente o sentry inclui gastos com servidores e principalmente com a manutenção de outro serviço. Na imagem acima o time de marketing da Sentry explicita que é possível usar o código, mas não sem um alto custo. Da mesma forma, o mantra de código aberto resultar em um maior nível de segurança, não parece se validar. Na prática, existem poucos incentivos para descobrir falhas de segurança alheias de graça.
 
@@ -92,3 +100,7 @@ Por fim obrigado pela leitura, e dadas tantas simplificações e afirmações se
 [2] SciPy 1.0: fundamental algorithms for scientific computing in Python
 
 [3] API design for machine learning software: experiences from the scikit-learn project
+
+---
+
+Fonte: [Divagações sobre as APIs do Numpy, Scipy e Scikit-Learn - Medium](https://medium.com/computando-arte/divaga%C3%A7%C3%B5es-sobre-as-apis-do-numpy-scipy-e-scikit-learn-4c42e9d117a8)

@@ -3,9 +3,19 @@ title: 'Sobre aranhas e teias'
 description: 'Ou web scraping, a cada qual segundo as suas vontades'
 author: 'Vinicius Aguiar'
 date: '2022-02-02'
-coverImage: '/images/michael-podger-unsplash.jpg'
+coverImage: '/images/008-001.webp'
 tags: ['web-scraping', 'python', 'typescript', 'automação']
 ---
+
+# Sobre aranhas e teias
+
+<figure>
+  <img src="/images/008-001.webp" alt="By michael podger on Unsplash" />
+  <figcaption style="text-align: center">
+    Photo by michael podger on Unsplash
+  </figcaption>
+</figure>
+<br/>
 
 ## Prólogo
 
@@ -17,15 +27,47 @@ Aliás, escrever sobre crawlers me lembra de dois textos. Um, o primeiro capítu
 
 É bem provável que esteja usando um navegador neste momento, logo convido você a entender um pouquinho mais suas ferramentas. Para isto basta abrir outra janela e acessar as ferramentas de desenvolvedor através do atalho `Ctrl+Shift+I`. Nela podemos observar algumas abas:
 
+<figure>
+  <img src="/images/008-002.webp" alt="Ferramentas de desenvolvedor do Google Chrome" />
+  <figcaption style="text-align: center">
+    Ferramentas de desenvolvedor do Google Chrome
+  </figcaption>
+</figure>
+<br/>
+
 Na aba `Elements` é possível visualizar a página em formato HTML, já a aba `Console` permite interagir com a página, como um terminal (aliás, já ouviu falar na palavra do zsh). Nesta última vale visualizar os dados disponíveis no `window.navigator`, ou `navigator` e também no `window.chrome`. Eles serão importantes (ou não) mais pra frente.
 
+<figure>
+  <img src="/images/008-003.webp" alt="Objeto navigator no console do browser" />
+  <figcaption style="text-align: center">
+    Objeto navigator no console do browser
+  </figcaption>
+</figure>
+<br/>
+
 Outras abas importantes são `Sources` e `Application`. A primeira nos permite ler o código dos arquivos js e css carregados, e a segunda permite o acesso aos cookies, local storage e session storage (que também podem ser acessados pelo console, mas esta aba é bem conveniente). Por fim, mas não menos importante, na aba `Network` é possível visualizar o fluxo das requisições.
+
+<figure>
+  <img src="/images/008-004.webp" alt="Fluxo de requisições da página" />
+  <figcaption style="text-align: center">
+    Fluxo de requisições da página
+  </figcaption>
+</figure>
+<br/>
 
 Esta última aba é a protagonista da história e por meio dela é possível montar raspadores de dados (vulgos crawlers). Para isso tenha em mente que qualquer automatização deste tipo é um fluxo de requisições, às vezes simples, como o download de uma imagem ou zip; às vezes complexo, com fluxo de autenticação, verificação de fluxo e de humanidade.
 
 ## Scraping em Baixo Nível
 
 A primeira forma de criar crawlers é usar requisições de baixo nível, que não são nada mais do requisições HTTP. Abaixo observamos um simples tipo de requisição para obter seu próprio IP (na aba Timeline do Insomnia).
+
+<figure>
+  <img src="/images/008-005.webp" alt="Requisição GET para a API do ipify" />
+  <figcaption style="text-align: center">
+    Requisição GET para a API do ipify
+  </figcaption>
+</figure>
+<br/>
 
 Um workflow para criar crawlers em baixo nível se resume entender o fluxo de requisições através da aba `Network` no browser, refazer este fluxo em um aplicativo como Insomnia ou Postman, e por fim reescrever em código.
 
@@ -52,6 +94,14 @@ def fetch(url, save_path, chunk_size=128):
 Alguns casos estão longe de serem tão diretos como baixar um arquivo no formato json com o cabeçalho da requisição correto. Existem empresas com foco em defesa contra bots, como Imperva e Akamai. Para estes casos também existem alternativas criadas pela comunidade, como puppeter, puppeter-extra e playwright (Não necessariamente criados para este problema, e sim para automação de testes em alguns casos. E algumas vezes provavelmente motivados por motivos excusos, sem palavras a mais).
 
 Note que nem tudo são flores. Essas bibliotecas tem um custo em termos de uso de processamento e memória, além do fato que não são uma solução pronta, é necessário trabalhar em cima das mesmas. Outro ponto importante neste caso é a limitação de requisições por IP, o bloqueio geográfico de IPs ou o bloqueio de IPs não residenciais (que sugere a necessidade de usar um provedor de IPs). Não tenho vergonha de só mostrar um exemplo bobo:
+
+<figure>
+  <img src="/images/008-006.gif" alt="Exemplo de resolução do Wordle com Puppeteer" />
+  <figcaption style="text-align: center">
+    Exemplo de resolução do Wordle com Puppeteer
+  </figcaption>
+</figure>
+<br/>
 
 Sim, estou fortemente considerando lançar o Wordle as a Service, e talvez até expandir esse serviço. Afinal pertencer a uma comunidade sustentada por esbanjar riqueza (NFTs?) ou inteligência (QI) é tão popular hoje.
 
@@ -82,3 +132,7 @@ E mais uma vez, muito obrigado pela leitura. A recomendação da vez é assistir
 ## Referências
 
 [1] Advanced Web Scraping Tactics
+
+---
+
+Fonte: [Sobre aranhas e teias - Medium](https://medium.com/computando-arte/sobre-aranhas-e-teias-595798ae2efb)

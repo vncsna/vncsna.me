@@ -3,9 +3,19 @@ title: 'Introdução a CI no GitHub Actions'
 description: 'E a introspecção no sábado com sensação térmica de 32º às 7h40min'
 author: 'Vinicius Aguiar'
 date: '2021-10-21'
-coverImage: '/images/roman-synkevych-unsplash.jpg'
+coverImage: '/images/007-001.webp'
 tags: ['github', 'ci', 'devops', 'automação']
 ---
+
+# Introdução a CI no GitHub Actions
+
+<figure>
+  <img src="/images/007-001.webp" alt="By Roman Synkevych on Unsplash" />
+  <figcaption style="text-align: center">
+    Photo by Roman Synkevych on Unsplash
+  </figcaption>
+</figure>
+<br/>
 
 ## Divagações
 
@@ -19,6 +29,14 @@ tags: ['github', 'ci', 'devops', 'automação']
 As melhores referências para aprender melhor como as actions funcionam estão na documentação oficial, em Workflow syntax for GitHub Actions e Events that trigger workflows.
 
 Criar um workflow novo é bem intuitivo, para isso basta acessar a aba de Actions, e são apresentados templates de workflows populares que simplificam o processo.
+
+<figure>
+  <img src="/images/007-002.webp" alt="Aba das Actions no GitHub" />
+  <figcaption style="text-align: center">
+    Aba das Actions no GitHub
+  </figcaption>
+</figure>
+<br/>
 
 Um workflow possuí três partes: o nome do workflow (_name_), os "gatilhos" que desencadeiam o processo (_on_) e as tarefas que serão executadas (_jobs_). No caso abaixo a CI do pacote da Base dos Dados é executado caso haja qualquer adição na branch master no repositório (_push_), ou caso exista um pull request que altere as pastas de workflows ou do pacote (_pull_request_), ou até manualmente (_workflow_dispatch_).
 
@@ -72,3 +90,7 @@ E a maior desvantagem que percebi até agora é que dependendo do workflow e act
 - Muito obrigado pela leitura (caros amigos do computando arte).
 - Recomendo ouvir Clube da Esquina, é um caminho sem volta.
 - Este sábado foi bem quente…
+
+---
+
+Fonte: [Introdução a CI no GitHub Actions - Medium](https://medium.com/computando-arte/introdu%C3%A7%C3%A3o-a-ci-no-github-actions-5b6e9ad1bb64)

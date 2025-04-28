@@ -1,9 +1,10 @@
 ---
 title: Visualizando Grafos de Visibilidade
 date: '2020-12-14'
+author: 'Vinicius Aguiar'
 ---
 
-_"A série Visualizando pretende introduzir tanto conceitos conhecidos quanto novos e experimentais, através de analogias e ilustrações. Sinta-se à vontade para conversar, compartilhar e criticar conosco."_
+# Visualizando Grafos de Visibilidade
 
 <figure>
   <img src="/images/001-001.webp" alt="Um gráfico de ações como exemplo" />
@@ -11,6 +12,9 @@ _"A série Visualizando pretende introduzir tanto conceitos conhecidos quanto no
     Photo by Markus Winkler on Unsplash
   </figcaption>
 </figure>
+<br/>
+
+_"A série Visualizando pretende introduzir tanto conceitos conhecidos quanto novos e experimentais, através de analogias e ilustrações. Sinta-se à vontade para conversar, compartilhar e criticar conosco."_
 
 ## Contexto
 
@@ -32,6 +36,12 @@ Vale lembrar então que previamente (e atualmente) eram (e são) criadas _handcr
 </figure>
 <br/>
 
+Na prática esse é um conceito super simples e novo que eu espero que tenha maior aplicação no futuro, mas como tudo que é pesquisa e desenvolvimento, pode cair no esquecimento. Ainda assim, espero que seja uma forma interessante de evidenciar a importância do esquecimento.
+
+Aliás, recomendo a leitura dos posts sobre carreira do professor Terence Tao. Em específico [este](https://terrytao.wordpress.com/career-advice/theres-more-to-mathematics-than-rigour-and-proofs/), em que trata das etapas de educação matemática e da importância da intuição, fator essencial para pesquisa e desenvolvimento.
+
+Note que o enfoque em grafos de visibilidade pode ser também puramente matemático, em que eu em particular creio que tem melhor futuro.
+
 ## Grafos de Visibilidade
 
 Imagine você em um universo que apenas existem arranha-céus e gostaria de ver outro arranha-céu. Regresse também para aulas de física do ensino médio, do tempo em que pinguins podiam ser aproximados por esferas, e aproxime então todos os prédios por paralelepípedos com alturas diferentes.
@@ -40,14 +50,15 @@ Imagine você em um universo que apenas existem arranha-céus e gostaria de ver 
   <img src="/images/001-004.webp" alt="Prédios em uma avenida" />
   <figcaption style="text-align: center">Photo by Pablo Vargas on Unsplash</figcaption>
 </figure>
-
 <br/>
 
-Dadas essas restrições, você percebe que consegue enxergar outro prédio (ou o topo do prédio) apenas caso não existam prédios intermediários que bloqueiem a visão. Isto é, você tem **visibilidade** de outro prédio apenas caso possa traçar uma reta de visão que não intercepte outro prédio.
+Dadas essas restrições, você percebe que consegue enxergar outro prédio (ou o topo do prédio) apenas caso não existam prédios intermediários que bloqueiem a visão. Isto é, você tem visibilidade de outro prédio apenas caso possa traçar uma reta de visão que não intercepte outro prédio.
 
-Isolando cada vez mais nosso universo, imagine também que estamos limitados ao lado de uma avenida. Então confinados apenas ao lado de uma avenida e com visibilidade apenas da esquerda e direita, não seria esquisito alguém confundir o cenário com uma gráfico de barras de uma série temporal.
+Isolando cada vez mais nosso universo, imagine também que estamos limitados ao lado de uma avenida. Nesse momento eu começo a me perguntar "Como eu fui cair nesse universo melancólico mesmo?" Até curtiria adicionar menções a O Gambito da Rainha, mas não vai ser desta vez.
 
-Agora imagine que cada prédio (barra, como desejar) represente um vértice e a visibilidade entre dois prédios represente a aresta entre dois vértices, logo temos um **grafo de visibilidade** relacionado a uma série temporal.
+Então confinados apenas ao lado de uma avenida (seria esse um cenário primo de [flatland](https://en.wikipedia.org/wiki/Flatland)) e com visibilidade apenas da esquerda e direita, não seria esquisito alguém confundir o cenário com uma gráfico de barras de uma série temporal (admito que foi meio forçado). No entanto seria improvável, mas por falta de criatividade essa é a analogia. Aguente mais um pouco por favor.
+
+Agora imagine que cada prédio (barra, como desejar) represente um vértice e a visibilidade entre dois prédios represente a aresta entre dois vértices, logo temos um grafo de visibilidade relacionado a uma série temporal.
 
 <figure>
   <img src="/images/001-005.webp" alt="Transformação de série temporal em grafo de visibilidade" />
@@ -128,6 +139,7 @@ def sort_and_conquer(x):
 ```
 
 <p style="text-align: center">Módulo principal do algoritmo sort and conquer.</p>
+<br/>
 
 ## Aplicações
 
@@ -148,6 +160,7 @@ def get_degree_sequence(graph):
 ```
 
 <p style="text-align: center">Extração de uma sequência de graus de uma matriz de adjacência.</p>
+<br/>
 
 ```python
 def get_degree_distribution(degseq):
@@ -163,13 +176,22 @@ def get_degree_distribution(degseq):
 ```
 
 <p style="text-align: center">Extração de uma distribuição de graus de uma sequência de graus.</p>
+<br/>
 
 Caso queira se aprofundar mais, disponibilizo um código que realiza a transformação de uma série temporal para sequência de graus de seu respectivo grafo de visibilidade. Note que este é um caso em que a transformação não resultou em melhora na classificação.
 
 Já a segunda opção, de explorar a relação entre uma série temporal e sua distribuição de graus do grafo de visibilidade, apresenta maior beleza e complexidade e portanto será abordada em futuros posts.
+
+## Observações
+
+Obrigado por me acompanhar até aqui, boa semana!!
 
 ## Referências
 
 [1] Lacasa, Lucas et al. "From time series to complex networks: The visibility graph". Em: Proceedings of the National Academy of Sciences 105.13 (2008), pp. 4972–4975.
 
 [2] Ghosh, Saptorshi e Dutta, Amlan. "An efficient non-recursive algorithm for transforming time series to visibility graph". Em: Physica A: Statistical Mechanics and its Applications 514 (2019), pp. 189–202.
+
+---
+
+Fonte: [Visualizando Grafos de Visibilidade - Medium](https://medium.com/computando-arte/visualizando-grafos-de-visibilidade-87cf3e4e4386)
